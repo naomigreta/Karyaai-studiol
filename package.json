@@ -1,0 +1,10 @@
+{
+  "name": "karyaai-studio-prompt-to-video",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

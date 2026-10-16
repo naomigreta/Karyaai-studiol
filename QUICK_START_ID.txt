@@ -1,0 +1,36 @@
+KARYAAI STUDIO v1.2 — MULAI CEPAT
+
+PAKET INI SIAP DEPLOY, TETAPI PERLU TOKEN REPLICATE MILIK ANDA.
+Render video bukan layanan gratis tanpa batas.
+
+DEPLOY YANG BENAR
+1. Ekstrak ZIP.
+2. Unggah ISI folder hasil ekstrak ke repository GitHub baru. Pastikan netlify.toml, package.json, folder site/, dan netlify/functions/ berada langsung di root repo.
+3. Di Netlify: Add new site > Import an existing project > pilih repository tersebut.
+4. Build command biarkan kosong. Publish directory site dan functions netlify/functions sudah diatur di netlify.toml.
+5. Di Netlify Environment variables, tambahkan:
+   REPLICATE_API_TOKEN = token dari akun Replicate Anda
+   KARYAAI_ACCESS_CODE = kode rahasia buatan Anda sendiri
+6. Deploy/redeploy setelah variabel disimpan.
+
+JANGAN pakai Netlify Drop sebagai unggahan statis biasa karena fungsi backend video perlu dijalankan.
+JANGAN meletakkan token di frontend, ZIP publik, GitHub, atau membagikannya.
+
+MENGGUNAKAN APLIKASI
+1. Buka URL HTTPS Netlify.
+2. Isi ide film dan profil serial/karakter.
+3. Unggah gambar referensi karakter bila ingin image-to-video.
+4. Susun storyboard, pilih adegan, lalu periksa prompt.
+5. Masukkan KARYAAI_ACCESS_CODE di kolom aplikasi.
+6. Pilih gaya/durasi/rasio, centang persetujuan biaya, tekan BUAT KLIP VIDEO.
+7. Simpan MP4 segera setelah selesai. Satu render menghasilkan satu klip; penyatuan otomatis film panjang belum tersedia.
+
+KETERANGAN
+- Model: wan-video/wan-2.2-5b-fast melalui Replicate.
+- Satu klip sekitar 5–24 detik. Durasi aktual bisa berbeda.
+- Gambar referensi membantu menjaga karakter tetapi tidak menjamin wajah identik.
+- Draft disimpan pada browser perangkat yang sama; gambar referensi harus dipilih ulang setelah reload.
+- Video API dapat berbayar. Periksa billing/harga Replicate sebelum render.
+
+UJI LOKAL (Node.js 20+): npm test
+Baca README_ID.md untuk petunjuk lengkap.
